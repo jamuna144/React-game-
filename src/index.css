@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(155deg, #090a0f, #22253a);
+  color: #e6e8f5;
+  min-height: 100vh;
+}
+
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.game-container {
+  width: min(100%, 520px);
+  background: rgba(17, 23, 45, 0.92);
+  border: 1px solid #575f89;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  padding: 26px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.score-card {
+  flex: 1;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #495168;
+}
+
+.player-score {
+  background-color: rgba(30, 57, 112, 0.7);
+}
+
+.computer-score {
+  background-color: rgba(97, 32, 42, 0.7);
+}
+
+.score-card h2 {
+  margin: 0 0 6px;
+}
+
+.choice-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  color: #fff;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary { background: linear-gradient(120deg, #1f6feb, #4cc3ff); }
+.btn-secondary { background: linear-gradient(120deg, #6b8cff, #812de5); }
+.btn-danger { background: linear-gradient(120deg, #ff4d4d, #e40000); }
+
+.result-display {
+  min-height: 86px;
+  margin-bottom: 16px;
+  padding: 14px;
+  border: 1px solid #445370;
+  border-radius: 10px;
+  background-color: rgba(30, 30, 53, 0.64);
+}
+
+.result-text {
+  margin-top: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.result-text.win { color: #9ae15e; }
+.result-text.lose { color: #ff7070; }
+.result-text.draw { color: #ecec80; }
+
+.loading-state,
+.no-game {
+  font-style: italic;
+  color: #c8cfe0;
+}
+
+.controls {
+  margin-top: 16px;
+}
+
+.username-group {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.username-group input {
+  border-radius: 8px;
+  border: 1px solid #445270;
+  padding: 7px 10px;
+  background: #1c2442;
+  color: #e6e8f5;
+}
+
+.username-group label {
+  font-size: 0.95rem;
+}
